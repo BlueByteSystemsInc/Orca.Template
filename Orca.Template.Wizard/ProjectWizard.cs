@@ -1,7 +1,7 @@
 ﻿using EnvDTE;
 using Microsoft.VisualStudio.TemplateWizard;
-using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Orca.Template.Wizard
 {
@@ -9,32 +9,52 @@ namespace Orca.Template.Wizard
     {
         public void BeforeOpeningFile(ProjectItem projectItem)
         {
-            throw new NotImplementedException();
         }
 
         public void ProjectFinishedGenerating(Project project)
         {
-            throw new NotImplementedException();
         }
 
         public void ProjectItemFinishedGenerating(ProjectItem projectItem)
         {
-            throw new NotImplementedException();
         }
 
         public void RunFinished()
         {
-            throw new NotImplementedException();
         }
 
-        public void RunStarted(object automationObject, Dictionary<string, string> replacementsDictionary, WizardRunKind runKind, object[] customParams)
+        public void RunStarted(object automationObject,
+            Dictionary<string, string> replacementsDictionary,
+            WizardRunKind runKind,
+            object[] customParams)
         {
-            throw new NotImplementedException();
+            var window = new WizardWindow();
+
+            if (window.ShowDialog() == true)
+            {
+
+            }
+            else
+            {
+                // remove project folder as its creation was cancelled
+                var destinationDirectory = replacementsDictionary["$destinationdirectory$"];
+                Directory.Delete(destinationDirectory, true);
+
+                // remove solution directory if it is empty
+                var solutionDirectory = replacementsDictionary["$solutiondirectory$"];
+                if (Directory.Exists(solutionDirectory) &&
+                    Directory.GetDirectories(solutionDirectory).Length == 0 && Directory.GetFiles(solutionDirectory).Length == 0)
+                {
+                    Directory.Delete(solutionDirectory);
+                }
+
+                throw new WizardBackoutException();
+            }
         }
 
         public bool ShouldAddProjectItem(string filePath)
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }
