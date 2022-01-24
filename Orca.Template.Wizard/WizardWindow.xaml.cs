@@ -7,9 +7,22 @@ namespace Orca.Template.Wizard
     /// </summary>
     public partial class WizardWindow : Window
     {
+        public ProjectDetails ProjectDetails { get; } = new ProjectDetails();
+
         public WizardWindow()
         {
             InitializeComponent();
+            DataContext = ProjectDetails;
+        }
+
+        private void OnOkButtonClick(object sender, RoutedEventArgs e)
+        {
+            DialogResult = true;
+        }
+
+        private void OnBrowseLicenceButtonClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

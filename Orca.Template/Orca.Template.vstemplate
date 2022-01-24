@@ -23,4 +23,8 @@
       <ProjectItem ReplaceParameters="true" OpenInEditor="true">PDMTest.cs</ProjectItem>
     </Project>
   </TemplateContent>
+  <WizardExtension>
+    <Assembly>Orca.Template.Wizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</Assembly>
+    <FullClassName>Orca.Template.Wizard.ProjectWizard</FullClassName>
+  </WizardExtension>
 </VSTemplate>
