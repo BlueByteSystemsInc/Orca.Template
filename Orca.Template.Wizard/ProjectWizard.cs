@@ -42,6 +42,10 @@ namespace Orca.Template.Wizard
                 }
 
                 replacementsDictionary["$orcaversion$"] = orcaVersion;
+
+                //save licese path to the registry
+                var settings = new WizardSettings { LicencePath = window.ProjectDetails.LicensePath };
+                settings.Save();
             }
             else
             {

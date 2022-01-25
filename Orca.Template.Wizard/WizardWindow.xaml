@@ -65,7 +65,6 @@
                   Grid.Column="1"
                   VerticalAlignment="Center"
                   IsEditable="True"
-                  SelectedIndex="0"
                   Text="{Binding OrcaVersion}">
             <ComboBoxItem>latest</ComboBoxItem>
             <ComboBoxItem>2021.0.0</ComboBoxItem>
