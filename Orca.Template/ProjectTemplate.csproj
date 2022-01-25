@@ -6,7 +6,7 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="Orca" Version="*" />
+    <PackageReference Include="Orca" Version="$orcaversion$" />
   </ItemGroup>
 
 </Project>

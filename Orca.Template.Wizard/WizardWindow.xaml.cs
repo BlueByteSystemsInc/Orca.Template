@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Microsoft.Win32;
+using System.Windows;
 
 namespace Orca.Template.Wizard
 {
@@ -22,7 +23,15 @@ namespace Orca.Template.Wizard
 
         private void OnBrowseLicenceButtonClick(object sender, RoutedEventArgs e)
         {
+            var openFileDialog = new OpenFileDialog
+            {
+                Filter = "XML files (*.xml)|*.xml|All files (*.*)|*.*"
+            };
 
+            if (openFileDialog.ShowDialog() == true)
+            {
+                LicensePathTextBox.Text = openFileDialog.FileName;
+            }
         }
     }
 }

@@ -32,7 +32,16 @@ namespace Orca.Template.Wizard
 
             if (window.ShowDialog() == true)
             {
+                replacementsDictionary["$pdmvault$"] = window.ProjectDetails.Vault;
+                replacementsDictionary["$xmllicensefile$"] = window.ProjectDetails.LicensePath;
 
+                var orcaVersion = window.ProjectDetails.OrcaVersion;
+                if (orcaVersion.ToLower() == "latest")
+                {
+                    orcaVersion = "*";
+                }
+
+                replacementsDictionary["$orcaversion$"] = orcaVersion;
             }
             else
             {

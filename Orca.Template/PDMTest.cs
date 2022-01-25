@@ -11,7 +11,7 @@ namespace $safeprojectname$
 {
     public static class LicenseInformation
     {
-        public static string licensePath = "Path to XML license file";
+        public static string licensePath = @"$xmllicensefile$";
     }
 
     #region startup
@@ -41,7 +41,7 @@ namespace $safeprojectname$
     /// change T to your a class that implements <see cref="IEdmAddIn5"/>
     /// change TestVault to use your testing vault
     /// </summary>
-    [TestVault(Name = "bluebyte")]
+    [TestVault(Name = "$pdmvault$")]
     public class PDMTest : TestableAddInBase<T>
     {
         #region Constructor
