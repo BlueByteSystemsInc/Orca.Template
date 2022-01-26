@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
-    <Name>Orca.Template</Name>
+    <Name>Orca Unit/Integration Tests for PDM add-ins</Name>
     <Description>Unit and integration testing framework for PDM Professional add-ins and task add-ins.</Description>
     <Icon>logo.png</Icon>
     <PreviewImage>orca.png</PreviewImage>
@@ -17,6 +17,10 @@
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
     <CreateInPlace>true</CreateInPlace>
     <ProjectTypeTag>PDM</ProjectTypeTag>
+    <ProjectTypeTag>SOLIDWORKSPDM</ProjectTypeTag>
+    <ProjectTypeTag>Unit Test</ProjectTypeTag>
+    <ProjectTypeTag>Integration Test</ProjectTypeTag>
+    <ProjectTypeTag>SOLIDWORKS</ProjectTypeTag>
   </TemplateData>
   <TemplateContent>
     <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
