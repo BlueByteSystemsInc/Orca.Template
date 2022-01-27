@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="Orca.Template.72b15c09-0393-4f32-aa00-cda08afee99d" Version="2022.0.0" Language="en-US" Publisher="Blue Byte Systems, Inc." />
+        <Identity Id="Orca.Template.72b15c09-0393-4f32-aa00-cda08afee99d" Version="2022.0.0" Language="en-US" Publisher="Blue Byte Systems Inc." />
         <DisplayName>Orca</DisplayName>
         <Description xml:space="preserve">Unit and integration testing framework for PDM Professional add-ins and task add-ins.</Description>
         <Icon>logo.png</Icon>
