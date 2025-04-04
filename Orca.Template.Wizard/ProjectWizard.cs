@@ -61,7 +61,7 @@ namespace Orca.Template.Wizard
                     Directory.Delete(solutionDirectory);
                 }
 
-                throw new WizardBackoutException();
+                
             }
         }
 
