@@ -28,7 +28,7 @@
     </Project>
   </TemplateContent>
   <WizardExtension>
-    <Assembly>Orca.Template.Wizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</Assembly>
+    <Assembly>Orca.Template.Wizard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4217b8b5c0e171e6</Assembly>
     <FullClassName>Orca.Template.Wizard.ProjectWizard</FullClassName>
   </WizardExtension>
 </VSTemplate>
